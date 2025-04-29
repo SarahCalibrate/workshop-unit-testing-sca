@@ -26,4 +26,11 @@ export class HelloWorldController {
       data,
     });
   }
+
+  async byeWorld(req: Request, res: Response) {
+    const data = await this.#helloWorldService.byeWorld();
+    res.status(200).json({
+      data,
+    });
+  }
 }
